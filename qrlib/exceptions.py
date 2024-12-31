@@ -1,4 +1,3 @@
-# coding: utf-8
 # (c) Copyright 2012 by Miguel Paolino <mpaolino@ideal.com.uy>
 
 class StyleFileMissing(Exception):
@@ -29,4 +28,10 @@ class InvalidApplication(Exception):
     pass
 
 class InvalidEcLevel(Exception):
+    pass
+
+class InvalidLogoMargin(Exception):
+    pass
+
+class InvalidAppSize(Exception):
     pass

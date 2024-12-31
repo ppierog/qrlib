@@ -1,4 +1,3 @@
-# coding: utf-8
 # (c) Copyright 2012 by Miguel Paolino <mpaolino@ideal.com.uy>
 from lib import pyqrcode
 from xml.etree import cElementTree as et
@@ -556,7 +555,6 @@ def _qrcode_to_svg(qrcode, style='default', style_color='#000000',
     filelike.write('<?xml version=\"1.0\" standalone=\"no\"?>\n')
     filelike.write('<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\"\n')
     filelike.write('\"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">\n')
-    print(svg_doc)
     filelike.write(et.tostring(svg_doc).decode('utf-8'))
     return filelike
 

@@ -1,4 +1,3 @@
-# coding: utf-8
 # (c) Copyright 2011 by Miguel Paolino <mpaolino@ideal.com.uy>
 from os.path import abspath, dirname
 import sys

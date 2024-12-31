@@ -1,4 +1,3 @@
-# coding: utf-8
 # (c) Copyright 2012 by Miguel Paolino <mpaolino@ideal.com.uy>
 from config import (INTERIOR_SMALL, INTERIOR_MEDIUM, INTERIOR_LARGE,
                     EXTERIOR_SMALL, EXTERIOR_MEDIUM, EXTERIOR_LARGE,
@@ -89,7 +88,6 @@ def _gen_pdf(qr_pil, instructions=True, bg_color='#FFFFFF', frame=True,
     qr_canvas.setPageCompression(pageCompression=1)
     qr_canvas.setCreator(PDF_CREATOR)
     qr_canvas.setAuthor(PDF_AUTHOR)
-    print(qr_canvas)
     qr_canvas.save()
 
     return filelike

@@ -1,11 +1,3 @@
-==========================================================================================================================
-WARNING: This project is VERY old and unmaintained (Python 2). I don't have any use for it anymore, if you do, please consider taking over
-==========================================================================================================================
-
-
-
-
-
 =====
 qrlib
 =====
@@ -21,7 +13,7 @@ Sample Usage
 
     import qrlib
     one_qr = qrlib.generate_qr_file('http://ideal.com.uy', qr_format='PDF')
-    f = open('qrsample.pdf', 'w')
+    f = open('qrsample.pdf', 'wb')
     f.write(one_qr.getvalue())
     f.close()
 

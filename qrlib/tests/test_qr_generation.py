@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import os
 from qrlib import generate_qr_file
 from qrlib.exceptions import (StyleMissing, InnerEyeStyleMissing,
