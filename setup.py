@@ -36,6 +36,5 @@ setup(
                             'static/styles/heavyround/*',
                             'static/styles/lightround/*',
                             'static/styles/sieve/*']},
-    install_requires=['PIL>=1.1.7', 'unittest2>=0.5.1', 'zbar>=0.10',
-                      'CairoSVG>=0.4.4']
+    install_requires=['pillow', 'unittest2', 'zbarlight', 'reportlab', 'CairoSVG']
     )
