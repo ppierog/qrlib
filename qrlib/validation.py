@@ -1,12 +1,11 @@
-# coding: utf-8
 # (c) Copyright 2011 by Miguel Paolino <mpaolino@ideal.com.uy>
 from config import (INTERIOR_SMALL, INTERIOR_MEDIUM, INTERIOR_LARGE,
                     EXTERIOR_SMALL, EXTERIOR_MEDIUM, EXTERIOR_LARGE,
                     LOGO_MARGIN, EYE_STYLES_DIR, STYLES_DIR)
-from exceptions import (StyleMissing, InvalidColor, InvalidSize,
+from exceptions import (InvalidLogoMargin, StyleMissing, InvalidColor, InvalidSize,
                         InvalidApplication, InnerEyeStyleMissing,
                         OuterEyeStyleMissing, InvalidSize,
-                        InvalidLanguage, InvalidEcLevel)
+                        InvalidLanguage, InvalidEcLevel, InvalidAppSize)
 
 import re
 from os.path import (join, isdir)
@@ -92,7 +91,7 @@ def language_validation(language):
 
 
 def color_validation(color):
-    if not re.match('\#[0-9A-Fa-f]{6}', color):
+    if not re.match('#[0-9A-Fa-f]{6}', color):
         raise InvalidColor('Invalid color \'%s\'' % (color))
     return True
 
