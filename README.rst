@@ -4,7 +4,16 @@ qrlib
 
 This is a library for QR images generation. It provides functions to
 generate predefined sized and custom QRs with several output formats.
-All functions return a filelike-object (StringIO) with the encoded QR.
+All functions return a filelike-object (BytesIO/ StringIo) with the encoded QR.
+
+Orginal library is created by Miguel Paolino, but since he stopped maintaining it,
+I decided to fork it and maintain it myself for my own website qrcodego.com where
+I used Miguel's version long time ago. At the moment the only value I added is
+Python3 porting.
+
+Installation
+============
+pip install git+https://github.com/ppierog/qrlib
 
 Sample Usage
 ============
