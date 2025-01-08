@@ -1,4 +1,5 @@
-PIL>= 1.1.7
-reportlab>=2.5
-CairoSVG>=0.4.4
-zbar>=0.10
+pillow
+unittest2
+zbarlight
+reportlab
+CairoSVG
