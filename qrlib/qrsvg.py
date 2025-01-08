@@ -491,8 +491,7 @@ def _qrcode_to_svg(qrcode, style='default', style_color='#000000',
     #width = str((module_count + (QUIET_ZONE * 2)) * BLOCK_SIZE)
     width = str(size)
     height = width                          # Height of the SVG QR code
-    svg_doc = et.Element('svg', width=width, height=height, version='1.1',
-                         xmlns='http://www.w3.org/2000/svg')
+    svg_doc = et.Element('svg', width=width, height=height, version='1.1')
 
     # Background square
     et.SubElement(svg_doc, 'rect', x='0', y='0', width=width, height=height,
@@ -551,11 +550,11 @@ def _qrcode_to_svg(qrcode, style='default', style_color='#000000',
                           style_dict=style_dict, color=style_color,
                           block_scale=block_scale)
 
-    filelike = StringIO()
-    filelike.write('<?xml version=\"1.0\" standalone=\"no\"?>\n')
-    filelike.write('<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\"\n')
-    filelike.write('\"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">\n')
-    filelike.write(et.tostring(svg_doc).decode('utf-8'))
+    filelike = BytesIO()
+    filelike.write(b'<?xml version=\"1.0\" standalone=\"no\"?>\n')
+    filelike.write(b'<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\"\n')
+    filelike.write(b'\"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">\n')
+    filelike.write(et.tostring(svg_doc))
     return filelike
 
 
